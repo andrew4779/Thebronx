@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myneighbour',
     'cloudinary',
+    'bootstrap4',
     'django_registration',
     'crispy_forms',
 
