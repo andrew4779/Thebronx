@@ -1,8 +1,8 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from django.http  import HttpResponse
 
-from myneighbour.models import Profile
-from .forms import ProfileUpdateForm,UserUpdateForm
+from myneighbour.models import NeighbourHood, Profile
+from .forms import ProfileUpdateForm,UserUpdateForm,NeighbourHoodForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 import datetime as dt
