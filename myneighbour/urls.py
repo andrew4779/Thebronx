@@ -11,8 +11,8 @@ urlpatterns=[
     path('search/',views.search_results,name='search_results'),
     path('new-hood/', views.new_hood, name='new-hood'),
     # path('post/<hood_id>', views.post, name='post'),
-    # path('single_hood/<hood_id>', views.single_hood, name='single-hood'),
-    # path('join_hood/<id>', views.join_hood, name='join-hood'),
+    path('single_hood/<hood_id>', views.single_hood, name='single-hood'),
+    path('join_hood/<id>', views.join_hood, name='join-hood'),
 
 
 
