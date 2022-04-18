@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'myneighbour',
     'cloudinary',
     'django_registration',
+    'crispy_forms',
+
 ]
 
 MIDDLEWARE = [
