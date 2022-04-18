@@ -52,4 +52,11 @@ class Business(models.Model):
 
     @classmethod
     def search_business(cls, name):
-        return cls.objects.filter(name__icontains=name).all()   
+        return cls.objects.filter(name__icontains=name).all()
+class Post(models.Model):
+    title = models.CharField(max_length=155)
+    description = models.TextField(max_length=255)
+    image = CloudinaryField('image')
+    created_at = models.DateTimeField(auto_now_add=True)
+    hood = models.ForeignKey(NeighbourHood, on_delete=models.CASCADE, related_name='posting')
+    user = user = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='developer')
