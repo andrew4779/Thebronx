@@ -16,7 +16,7 @@ class ProfileTest(TestCase):
         self.profile = Profile(email='aa@gmail.com', photo='', bio='xxxx',
                                     user=self.user)
         self.profile.save()
-        self.neighbourhood =  NeighbourHood(name = "Nairobi", location= "Ngara", admin = self.profile,description='xxxx', photo="")
+        self.neighbourhood =  NeighbourHood(name = "Nairobi", location= "Nyayo estate", admin = self.profile,description='xxxx', photo="")
         self.neighbourhood.save()
         
       
@@ -46,7 +46,7 @@ class NeighbourHoodTest(TestCase):
      
         self.user = User(username="tary", password="123")
         self.user.save()
-        self.neighbourhood =  NeighbourHood(name = "Nairobi", location= "Ngara", admin = self.user,description='xxxx', photo="")
+        self.neighbourhood =  NeighbourHood(name = "Nairobi", location= "Nyayo estate", admin = self.user,description='xxxx', photo="")
         self.neighbourhood.save()
    
     def test_instance(self):
