@@ -13,9 +13,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
+from django.contrib.auth import views
+from django.contrib.auth.views import LoginView, logout_then_login, LogoutView
+
+# from myhood.settings import STATIC_ROOT
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('myneighbour.urls')),
+    path('accounts/', include('django_registration.backends.one_step.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('logout/', views.LogoutView.as_view(next_page='login'), name='logout'),
 ]
