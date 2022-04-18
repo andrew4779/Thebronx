@@ -8,7 +8,6 @@ urlpatterns=[
     path('logout/',auth_views.LogoutView.as_view(template_name = 'registration/logout.html')),
     # path('profile/', views.profile, name='profile'),
     # path('hood/', views.hoods, name='hood'),
-    # path('search/',views.search_results,name='search_results'),
     # path('new-hood/', views.new_hood, name='new-hood'),
     # path('post/<hood_id>', views.post, name='post'),
     # path('single_hood/<hood_id>', views.single_hood, name='single-hood'),

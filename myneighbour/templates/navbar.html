@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: rgb(17, 14, 16);">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">Bronx</a>
+        <div class="collapse navbar-collapse text-dark" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{%url 'profile'%}">Profile</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="/admin">Admin</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/accounts/logout">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
+                </li>
+                {% endif %}
+            </ul>
+            <form class="form-inline my-2 my-lg-0" role="search" action="{% url 'search_results' %}">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                    name="project">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
