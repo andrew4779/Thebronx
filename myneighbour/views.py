@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, render, redirect
-from django.http  import HttpResponse
+from django.http  import HttpResponse, HttpResponseRedirect
 
 from myneighbour.models import Business, NeighbourHood, Post, Profile
 from .forms import ProfileUpdateForm,UserUpdateForm,NeighbourHoodForm,PostForm,BusinessForm
@@ -134,3 +134,19 @@ def search_results(request):
     else:
         message="You haven't searched for any item"
         return render(request,'search.html',{"message":message}) 
+
+@login_required(login_url="/accounts/login/")
+def new_business(request):
+    current_user = request.user
+    if request.method == "POST":
+        
+        form=BusinessForm(request.POST,request.FILES)
+
+        if form.is_valid():
+            business=form.save(commit=False)
+            business.user=current_user
+            business.save()
+        return HttpResponseRedirect('/businesses')
+    else:
+        form=BusinessForm()
+    return render (request,'business_form.html', {'form': form, 'profile': profile})

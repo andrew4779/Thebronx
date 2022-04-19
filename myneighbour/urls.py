@@ -13,8 +13,8 @@ urlpatterns=[
     path('new-hood/', views.new_hood, name='new-hood'),
     path('<hood_id>/news', views.news, name='news'),                    
     path('<hood_id>/business',views.business,name='business'),
-    path('leave_hood/<id>', views.leave_hood, name='leave-hood'),
     path('businesses/<hood_id>', views.businesses, name='businesses'),
+    path('new_business/',views.new_business, name='new_business'),
     path('post/<hood_id>', views.post, name='post'),
     path('search/',views.search_results,name='search_results'),
 ]

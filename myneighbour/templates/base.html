@@ -1,4 +1,4 @@
-{% load bootstrap4 %} {% load static%}
+{% load static%}
 <!DOCTYPE html>
 <html>
 
@@ -7,7 +7,7 @@
     <title>  - {{title}}</title>
     {% else %}
     <title> Bronx Hood</title>
-    {% endif %} {% block styles %} {% bootstrap_css %}
+    {% endif %} {% block styles %}
     <link rel="stylesheet" href="{% static 'css/st.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
     {% include "navbar.html" %} {% block content %}
     <h1 class='text-center'></h1> {%endblock%} {% block scripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    {% bootstrap_javascript %} {% endblock %}
+     {% endblock %}
 </body>
 
 </html>

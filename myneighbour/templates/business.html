@@ -3,7 +3,6 @@
 {% load bootstrap4 %}
 {% block styles %}
 {{ block.super}}
-<link rel="stylesheet" href="{% static 'css/index.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -28,6 +27,10 @@
         </div>
         <hr>
         </div>
+        <form action="{%url 'new_business'%}" method="post" enctype="multipart/form-data">
+            {%csrf_token%}    
+            <input type="submit" class="btn btn-dark " value="New Business">
+        </form>
     </div>
 </div>
 {% endblock %}

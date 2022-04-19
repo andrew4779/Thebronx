@@ -15,11 +15,6 @@
                     <p class="card-text">{{hood.location}}</p>
                     <p class="card-text">{{hood.description}}</p>
                     {%if request.user.profile.neighbourhood == hood %}
-                    <a class="btn-sm" href="{%url 'leave-hood' hood.id%}"
-                        style="background-color: red;color: white;">Leave Hood</a>
-
-                    {%elif not request.user.profile.neighbourhood%}
-
 
                     <a class="btn-sm" href="{%url 'join-hood' hood.id%}"
                         style="background-color: red;color: white;">Join Hood</a>
