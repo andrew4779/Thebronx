@@ -1,4 +1,4 @@
-{% load static %}
+{% load bootstrap4 %} {% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <title>Bronx - Account </title>
     <!-- favico -->
-    {% block styles %}
+    {% block styles %} {% bootstrap_css %}
     <link rel="stylesheet" href="{% static 'css/auth.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
