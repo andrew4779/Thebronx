@@ -13,14 +13,13 @@ To get the project .......
 https://github.com/andrew4779/Thebronx.git
 
 ###### Navigate into the folder and install requirements
-bash cd neighborhood
+ cd myneighbour
 
 #### Install and activate Virtual
-bash
 
 * python3 -m venv virtual - source virtual/bin/activate
 ###### Install Dependencies
-bash pip install -r requirements.txt
+pip install -r requirements.txt
 
 ###### Setup Database
 SetUp your database User,Password, Host then make migrate
@@ -33,7 +32,7 @@ python manage.py migrate
 python manage.py runserver
 
 ###### Testing the application
-bash python manage.py test
+python manage.py test
 
 Open the application on your browser 127.0.0.1:8000.
 
@@ -57,7 +56,10 @@ Open a Pull Request
 ### Support and contact details
 For support and contact details;
 
-Call:0793857337 Email at andrewkimani02@gmail.com
+Call:
+# 0793857337 
+Email at:
+# andrewkimani02@gmail.com
 
 #### Copyright
 Copyright (c) {2022} *** Andrew kimani ***
